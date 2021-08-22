@@ -1,4 +1,5 @@
-###Question -1
+###Performing clustering for the airlines data to obtain optimum number of clusters. 
+
 east <- read.csv("/Users/jobinsamuel/Desktop/EastWest.csv") #Read data
 sum(is.na(east))   #Checking for na values
 summary(east)      #To know the info of  min , max etc
@@ -24,7 +25,8 @@ feaswst <- data.frame(mem,east)
 
 aggregate(east, by = list(mem), FUN = mean)
 
-###Question -2
+###Performing clustering for the crime data and identify the number of clusters formed 
+
 crime <- read.csv("/Users/jobinsamuel/Desktop/Assignments/Hierarchial Clustering/Dataset_Assignment Clustering/crime_data.csv") #Read data
 sum(is.na(crime))   #Checking for na values
 summary(crime)      #To know the info of  min , max etc
@@ -50,7 +52,9 @@ fcrime <- data.frame(cir,crime)
 # Aggregate by mean of each cluster
 aggregate(crime, by = list(cir), FUN = mean) #Ignore warnings
 
-###Question-3
+###Perform clustering analysis on the telecom data set. The data is a mixture of both categorical and numerical data.
+### It consists the number of customers who churn. Derive insights and get possible information on factors that may affect the churn decision.
+
 library(readxl)
 tele <- read_excel("/Users/jobinsamuel/Downloads/Dataset_Assignment Clustering/Telco_customer_churn.xlsx")
 sum(is.na(tele))
@@ -85,7 +89,8 @@ fcrime <- data.frame(cir,crime)
 # Aggregate by mean of each cluster
 aggregate(crime, by = list(cir), FUN = mean) #Ignore warnings
 
-###Question-4
+###Performing clustering on mixed data convert the categorical variables to numeric by using dummies or Label Encoding and perform normalization techniques.
+### The data set consists details of customers related to auto insurance.
 auto <-read.csv ("/Users/jobinsamuel/Desktop/Assignments/Hierarchial Clustering/Dataset_Assignment Clustering/AutoInsurance.csv")
 auto <- aut[,c(-1:-2,-7:-8)]#Removing unecessary columns
 #Creating Dummies for character data 
