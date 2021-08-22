@@ -1,7 +1,8 @@
 import pandas as pd       #import pandas
 import matplotlib.pylab as plt  #Import matplotlib.pylab for plots
 
-##Question -1 
+##Performing clustering for the airlines data to obtain optimum number of clusters
+
 air = pd.read_csv("/Users/jobinsamuel/Desktop/EastWest.csv")  #Using read_csv  to read .csv file
 
 air.describe() #Used to get info about min max mean etc
@@ -48,7 +49,8 @@ air1.head() #Gives the first five data
 air1.iloc[:, 2:].groupby(air1.cluster).mean() #Using groupby function and finding the mean  to column 2 to 13  
 
 
-####Question-2
+####Performing clustering for the crime data and identify the number of clusters formed 
+
 vdm = pd.read_csv("/Users/jobinsamuel/Desktop/Assignments/Hierarchial Clustering/Dataset_Assignment Clustering/crime_data.csv") #Read the data
 vdm.describe()       #Used to get info about min max mean etc
 vdm.isna().sum()    #Checking for any NA values if present
@@ -93,7 +95,8 @@ vdm.head() #Gives the first five data
 vdm.iloc[:, :5].groupby(vdm.clust).mean()#Using groupby function and finding the mean  to column 0 to 5 
 
 
-####Question-3
+####Performing clustering analysis on the telecom data set. The data is a mixture of both categorical and numerical data.
+####It consists the number of customers who churn. Derive insights and get possible information on factors that may affect the churn decision.
 
 chrn=pd.read_excel("/Users/jobinsamuel/Downloads/Dataset_Assignment Clustering/Telco_customer_churn.xlsx") #Read the data
 
@@ -158,7 +161,8 @@ chrn.head() #Gives the first five data
 chrn.iloc[:, 1:22].groupby(chrn.clust).mean() #Using groupby function and finding the mean  to column 1 to 22 
 
 
-###Question-4
+###Performing clustering on mixed data convert the categorical variables to numeric by using dummies and perform normalization techniques.
+####The data set consists details of customers related to auto insurance.
 
 auto = pd.read_csv("/Users/jobinsamuel/Desktop/Assignments/Hierarchial Clustering/Dataset_Assignment Clustering/AutoInsurance.csv") #Read data
 auto.describe()      #Used to get info about min max mean etc
